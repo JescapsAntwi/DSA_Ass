@@ -1,6 +1,6 @@
-import java.util.Objects;
 
-// Class to represent the Telephone Directory using a Binary Search Tree
+
+// This class represents the Telephone Directory using a Binary Search Tree
 public class PartB {
 
     private Node root; // Root of the BST
@@ -10,15 +10,9 @@ public class PartB {
         this.root = null; // Initialize with an empty tree
     }
 
-    /**
-     * Inserts a new contact (name and phone number) into the Telephone Directory.
-     *
-     * @param name  The name of the contact to insert.
-     * @param phone The phone number of the contact to insert.
-     */
+
     public void insert(String name, String phone) {
-        // Implementation of the insert operation
-        // Connects to the pseudocode and brainstorming from Stage 3 (Part A)
+
 
         Node newNode = new Node(name, phone); // Create a new node
 
@@ -48,17 +42,10 @@ public class PartB {
         }
     }
 
-    /**
-     * Searches for a contact in the Telephone Directory by name.
-     *
-     * @param name The name of the contact to search for.
-     * @return The phone number of the contact if found, null otherwise.
-     */
-    public String search(String name) {
-        // Implementation of the search operation
-        // Connects to the pseudocode and brainstorming from Stage 3 (Part A)
 
-        if (root == null) { // If the tree is empty
+    public String search(String name) {
+
+      if (root == null) { // If the tree is empty
             return null; // Return null if not found
         }
 
@@ -77,24 +64,12 @@ public class PartB {
         return null; // Return null if not found
     }
 
-    /**
-     * Deletes a contact from the Telephone Directory by name.
-     *
-     * @param name The name of the contact to delete.
-     */
+
     public void delete(String name) {
-        // Implementation of the delete operation
-        // Connects to the pseudocode and brainstorming from Stage 3 (Part B)
+
         root = deleteNode(root, name);
     }
 
-    /**
-     * Recursive helper function to delete a node with the given name.
-     *
-     * @param currentNode The current node being examined.
-     * @param name        The name of the contact to delete.
-     * @return The updated subtree after deletion.
-     */
     private Node deleteNode(Node currentNode, String name) {
         if (currentNode == null) { // Base case: Node not found
             return null;
@@ -128,12 +103,7 @@ public class PartB {
         }
     }
 
-    /**
-     * Helper function to find the node with the minimum value in a subtree.
-     *
-     * @param node The root of the subtree.
-     * @return The node with the minimum value.
-     */
+
     private Node findMin(Node node) {
         while (node.left != null) {
             node = node.left;
@@ -141,10 +111,6 @@ public class PartB {
         return node;
     }
 
-    // Method to print the telephone directory in order (for testing purposes)
-    public void printDirectory() {
-        inorderTraversal(root);
-    }
 
     private void inorderTraversal(Node node) {
         if (node == null) {
