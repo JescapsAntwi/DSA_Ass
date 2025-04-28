@@ -1,5 +1,3 @@
-
-
 // This class represents the Telephone Directory using a Binary Search Tree
 public class PartB {
 

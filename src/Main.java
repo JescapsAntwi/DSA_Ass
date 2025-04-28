@@ -7,7 +7,7 @@ public class Main {
         directoryA.insert("Kwame", "123-4567");
         directoryA.insert("Ama", "987-6543");
         directoryA.insert("Yaw", "234-5678");
-        System.out.println("Ama's phone number: " + directoryA.search("Ama")); // Expected: 987-6543
+        System.out.println("Ama's phone number: " + directoryA.search("Ama")); // This outputs 987-6543
 
 
         // Part B
@@ -17,7 +17,7 @@ public class Main {
         directoryB.insert("Ama", "987-6543");
         directoryB.insert("Yaw", "234-5678");
         directoryB.delete("Ama");
-        System.out.println("Ama's phone number after deletion: " + directoryB.search("Ama")); // Expected: null
+        System.out.println("Ama's phone number after deletion: " + directoryB.search("Ama")); // This outputs null
 
 
         // Part C
@@ -28,6 +28,6 @@ public class Main {
         directoryC.insert("Yaw", "234-5678");
         directoryC.insert("Afia", "876-5432");
         System.out.println("Telephone Directory (In-Order):");
-        directoryC.printDirectory(); // Expected: Afia, Ama, Kwame, Yaw in order.
+        directoryC.printDirectory(); // This prints Afia, Ama, Kwame, Yaw in order.
     }
 }

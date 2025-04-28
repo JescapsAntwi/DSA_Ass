@@ -1,5 +1,3 @@
-import java.util.Objects;
-
 // This class represents the Telephone Directory using a Binary Search Tree
 public class PartA {
 
