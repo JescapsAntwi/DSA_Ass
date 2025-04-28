@@ -1,6 +1,6 @@
 import java.util.Objects;
 
-// Class to represent a node in the Binary Search Tree
+// This class represents a node in the Binary Search Tree
 class Node {
     String name;
     String phone;
@@ -15,7 +15,7 @@ class Node {
         this.right = null;
     }
 
-    // Override equals and hashcode methods.
+    // Overriding equals
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

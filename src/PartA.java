@@ -1,44 +1,39 @@
 import java.util.Objects;
 
-// Class to represent the Telephone Directory using a Binary Search Tree
+// This class represents the Telephone Directory using a Binary Search Tree
 public class PartA {
 
     private Node root; // Root of the BST
 
     // Constructor for the TelephoneDirectory class
     public PartA() {
-        this.root = null; // Initialize with an empty tree
+        this.root = null; // Starting with an empty tree
     }
 
-    /**
-     * Inserts a new contact (name and phone number) into the Telephone Directory.
-     *
-     * @param name  The name of the contact to insert.
-     * @param phone The phone number of the contact to insert.
-     */
+
+    // Implementation of the insert operation
     public void insert(String name, String phone) {
-        // Implementation of the insert operation
-        // Connects to the pseudocode and brainstorming from Stage 3
 
-        Node newNode = new Node(name, phone); // Create a new node (Pseudocode: newNode = Node(name, phone))
 
-        if (root == null) { // If the tree is empty (Pseudocode: if root is NULL)
-            root = newNode; // The new node becomes the root (Pseudocode: root = newNode)
+        Node newNode = new Node(name, phone); // Creating a new node
+
+        if (root == null) { // If the tree is empty
+            root = newNode; // The new node becomes the root
             return;
         }
 
-        Node currentNode = root; // Start at the root (Pseudocode: currentNode = root)
+        Node currentNode = root; // Start at the root
 
-        while (true) { // Loop until we find the right spot (Pseudocode: while TRUE)
-            if (name.compareTo(currentNode.name) < 0) { // If the new name is less than the current name (Pseudocode: if name < currentNode.name)
-                if (currentNode.left == null) { // If the left child is empty (Pseudocode: if currentNode.left is NULL)
-                    currentNode.left = newNode; // Insert the new node here (Pseudocode: currentNode.left = newNode)
+        while (true) { // Loop until i find the right spot
+            if (name.compareTo(currentNode.name) < 0) { // If the new name is less than the current name
+                if (currentNode.left == null) { // If the left child is empty
+                    currentNode.left = newNode; // Insert the new node here
                     return;
-                } else { // Otherwise, move to the left child (Pseudocode: else)
-                    currentNode = currentNode.left; // (Pseudocode: currentNode = currentNode.left)
+                } else { // Otherwise, i move to the left child
+                    currentNode = currentNode.left;
                 }
-            } else { // If the new name is greater than or equal to the current name (Pseudocode: else if name >= currentNode.name)
-                if (currentNode.right == null) { // If the right child is empty (Pseudocode: if currentNode.right is NULL)
+            } else { // If the new name is greater than or equal to the current name
+                if (currentNode.right == null) { // If the right child is empty
                     currentNode.right = newNode; // Insert the new node here (Pseudocode: currentNode.right = newNode)
                     return;
                 } else { // Otherwise, move to the right child (Pseudocode: else)
