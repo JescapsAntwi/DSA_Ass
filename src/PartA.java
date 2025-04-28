@@ -56,7 +56,7 @@ public class PartA {
 
         while (currentNode != null) { // Loop until we find the name or reach a leaf
             if (name.equals(currentNode.name)) { // If we find the name
-                return currentNode.phone; // Return the phone number (Pseudocode: return currentNode.phone)
+                return currentNode.phone; // Return the phone number
             } else if (name.compareTo(currentNode.name) < 0) { // If the name is less than the current name (Pseudocode: else if name < currentNode.name)
                 currentNode = currentNode.left; // Go to the left child (Pseudocode: currentNode = currentNode.left)
             } else { // If the name is greater than the current name (Pseudocode: else)
