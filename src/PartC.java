@@ -1,6 +1,6 @@
-import java.util.Objects;
 
-// Class to represent the Telephone Directory using a Binary Search Tree
+
+// This class represents the Telephone Directory using a Binary Search Tree
 public class PartC {
 
     private Node root; // Root of the BST
@@ -10,15 +10,8 @@ public class PartC {
         this.root = null; // Initialize with an empty tree
     }
 
-    /**
-     * Inserts a new contact (name and phone number) into the Telephone Directory.
-     *
-     * @param name  The name of the contact to insert.
-     * @param phone The phone number of the contact to insert.
-     */
+
     public void insert(String name, String phone) {
-        // Implementation of the insert operation
-        // Connects to the pseudocode and brainstorming from Stage 3 (Part A)
 
         Node newNode = new Node(name, phone); // Create a new node
 
@@ -48,15 +41,8 @@ public class PartC {
         }
     }
 
-    /**
-     * Searches for a contact in the Telephone Directory by name.
-     *
-     * @param name The name of the contact to search for.
-     * @return The phone number of the contact if found, null otherwise.
-     */
+
     public String search(String name) {
-        // Implementation of the search operation
-        // Connects to the pseudocode and brainstorming from Stage 3 (Part A)
 
         if (root == null) { // If the tree is empty
             return null; // Return null if not found
@@ -79,28 +65,21 @@ public class PartC {
 
 
 
-    /**
-     * Prints the Telephone Directory in ascending order of contact names.
-     */
+
     public void printDirectory() {
-        // Implementation of the print operation using in-order traversal
-        // Connects to the pseudocode and brainstorming from Stage 3 (Part C)
+
         inorderTraversal(root);
     }
 
-    /**
-     * Recursive helper function to perform in-order traversal of the BST.
-     *
-     * @param node The current node being visited.
-     */
+
     private void inorderTraversal(Node node) {
-        if (node == null) { // Base case: If the node is null, return (Pseudocode: if node is NULL)
+        if (node == null) { // Base case: If the node is null, return
             return;
         }
 
-        inorderTraversal(node.left);         // Recursively print the left subtree (Pseudocode: printInOrder(node.left))
-        System.out.println(node.name + ": " + node.phone); // Print the node's data (Pseudocode: print node.name, node.phone)
-        inorderTraversal(node.right);        // Recursively print the right subtree (Pseudocode: printInOrder(node.right))
+        inorderTraversal(node.left);         // Recursively print the left subtree
+        System.out.println(node.name + ": " + node.phone); // Print the node's data
+        inorderTraversal(node.right);        // Recursively print the right subtree
     }
 
 
