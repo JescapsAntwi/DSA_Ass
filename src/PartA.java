@@ -59,7 +59,7 @@ public class PartA {
                 return currentNode.phone; // Return the phone number
             } else if (name.compareTo(currentNode.name) < 0) { // If the name is less than the current name
                 currentNode = currentNode.left; // Go to the left child
-            } else { // If the name is greater than the current name (Pseudocode: else)
+            } else { // If the name is greater than the current name
                 currentNode = currentNode.right; // Go to the right child (Pseudocode: currentNode = currentNode.right)
             }
         }
