@@ -43,21 +43,16 @@ public class PartA {
         }
     }
 
-    /**
-     * Searches for a contact in the Telephone Directory by name.
-     *
-     * @param name The name of the contact to search for.
-     * @return The phone number of the contact if found, null otherwise.
-     */
-    public String search(String name) {
-        // Implementation of the search operation
-        // Connects to the pseudocode and brainstorming from Stage 3
 
-        if (root == null) { // If the tree is empty (Pseudocode: if root is NULL)
-            return null; // Return null if not found (Pseudocode: return NULL)
+    public String search(String name) {
+
+
+
+        if (root == null) { // If the tree is empty
+            return null; // Return null if not found
         }
 
-        Node currentNode = root; // Start at the root (Pseudocode: currentNode = root)
+        Node currentNode = root; // Start at the root
 
         while (currentNode != null) { // Loop until we find the name or reach a leaf (Pseudocode: while currentNode is not NULL)
             if (name.equals(currentNode.name)) { // If we find the name (Pseudocode: if name == currentNode.name)
