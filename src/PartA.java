@@ -34,7 +34,7 @@ public class PartA {
                 if (currentNode.right == null) { // If the right child is empty
                     currentNode.right = newNode; // Insert the new node here
                     return;
-                } else { // Otherwise, move to the right child (Pseudocode: else)
+                } else { // Otherwise, move to the right child
                     currentNode = currentNode.right;
                 }
             }
