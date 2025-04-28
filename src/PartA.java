@@ -60,17 +60,13 @@ public class PartA {
             } else if (name.compareTo(currentNode.name) < 0) { // If the name is less than the current name
                 currentNode = currentNode.left; // Go to the left child
             } else { // If the name is greater than the current name
-                currentNode = currentNode.right; // Go to the right child (Pseudocode: currentNode = currentNode.right)
+                currentNode = currentNode.right; // Go to the right child
             }
         }
 
-        return null; // Return null if not found (Pseudocode: return NULL)
+        return null; // Return null if not found
     }
 
-    // Method to print the telephone directory in order (for testing purposes)
-    public void printDirectory() {
-        inorderTraversal(root);
-    }
 
     private void inorderTraversal(Node node) {
         if (node == null) {
