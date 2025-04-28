@@ -34,10 +34,10 @@ public class PartA {
                 }
             } else { // If the new name is greater than or equal to the current name
                 if (currentNode.right == null) { // If the right child is empty
-                    currentNode.right = newNode; // Insert the new node here (Pseudocode: currentNode.right = newNode)
+                    currentNode.right = newNode; // Insert the new node here
                     return;
                 } else { // Otherwise, move to the right child (Pseudocode: else)
-                    currentNode = currentNode.right; // (Pseudocode: currentNode = currentNode.right)
+                    currentNode = currentNode.right;
                 }
             }
         }
