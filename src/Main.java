@@ -1,6 +1,5 @@
 public class Main {
     public static void main(String[] args) {
-        // Example usage of the TelephoneDirectory classes
 
         // Part A
         System.out.println("Part A: Insert and Search");
