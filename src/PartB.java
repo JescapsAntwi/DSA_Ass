@@ -79,7 +79,7 @@ public class PartB {
         } else if (name.compareTo(currentNode.name) > 0) { // If the name is greater than the current node's name
             currentNode.right = deleteNode(currentNode.right, name); // Recurse on the right subtree
             return currentNode;
-        } else { // If the name is equal to the current node's name (Node to delete found)
+        } else { // If the name is equal to the current node's name (that is the Node to delete found)
             // Case 1: Node has no children (Leaf Node)
             if (currentNode.left == null && currentNode.right == null) {
                 return null;
@@ -93,7 +93,7 @@ public class PartB {
             // Case 3: Node has two children
             else {
                 Node successor = findMin(currentNode.right); // Find the inorder successor
-                currentNode.name = successor.name;        // Copy successor's data
+                currentNode.name = successor.name;        // Copy successor's data (name and number)
                 currentNode.phone = successor.phone;
                 currentNode.right = deleteNode(currentNode.right, successor.name); // Delete the successor
                 return currentNode;

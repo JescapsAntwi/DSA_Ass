@@ -79,6 +79,4 @@ public class PartC {
         System.out.println(node.name + ": " + node.phone); // Print the node's data
         inorderTraversal(node.right);        // Recursively print the right subtree
     }
-
-
 }
